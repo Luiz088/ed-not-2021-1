@@ -122,6 +122,15 @@ console.log(densidade)
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
+for (let i = 0; i < estadosNe.length; i++) {
+    let densidadeDemografica
+    densidade(i.area, i.populacao)
+    return densidadeDemografica
+    i['Densidade Demografica'] = densidadeDemografica
+    delete i.sigla
+}
+
+console.table(estadosNe)
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
