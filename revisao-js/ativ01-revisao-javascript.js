@@ -110,8 +110,7 @@ estadosNe.push(estado9)
       segunda pela primeira. 
 */
 
-let densidade = (area, populacao) => area / populacao
-console.log(densidade)
+let densidade = (area, populacao) => (area/populacao)
 
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
@@ -123,22 +122,30 @@ console.log(densidade)
 
 */
 for (let i = 0; i < estadosNe.length; i++) {
-    let densidadeDemografica
-    densidade(i.area, i.populacao)
-    return densidadeDemografica
-    i['Densidade Demografica'] = densidadeDemografica
-    delete i.sigla
+   estadosNe[i].densidade = densidade(estadosNe[i].area,estadosNe[i].populacao)
+   delete estadosNe[i].sigla
 }
 
-console.table(estadosNe)
+console.log(estadosNe)
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
 
+let propri = (objeto) => {
+    for (const key in objeto) {
+       console.log(key + " = " + objeto[key])
+    }
+}
+
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
+*/
+
+for (let objeto of estadosNe) {
+    propri(objeto)
+}
 
 /*
    6)
@@ -152,3 +159,11 @@ console.table(estadosNe)
          já existentes, e assim por diante.
 
 */
+
+let nome_estados = []
+
+
+nome_estados.unshift(estadosNe[1].nome)
+nome_estados.splice(2,0,estadosNe[8].nome, estadosNe[5].nome, estadosNe[7].nome, estadosNe[3].nome,estadosNe[4].nome,estadosNe[6].nome, estadosNe[2].nome)
+nome_estados.push(estadosNe[0].nome)
+console.log(nome_estados)
