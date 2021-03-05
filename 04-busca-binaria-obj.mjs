@@ -38,7 +38,7 @@ let comps
  console.time('Buscando LAMARA')
  console.log(buscaBinaria(objNomes, (obj, busca = 'LAMARA') => {
     if(busca === obj.first_name) return 0
-    else if(busca , obj.first_name) return -1
+    else if(busca < obj.first_name) return -1
     else return 1
  }), {comps})
  console.timeEnd('Buscando LAMARA')
@@ -46,7 +46,7 @@ let comps
 console.time('Buscando ZOZIMO')
 console.log(buscaBinaria(objNomes, (obj, busca = 'ZOZIMO') => {
     if(busca === obj.first_name) return 0
-    else if(busca , obj.first_name) return -1
+    else if(busca < obj.first_name) return -1
     else return 1
 }), {comps})
 console.timeEnd('Buscando ZOZIMO')
@@ -54,7 +54,7 @@ console.timeEnd('Buscando ZOZIMO')
 console.time('Buscando ORKUTILSON')
 console.log(buscaBinaria(objNomes, (obj, busca = 'ORKUTILSON') => {
     if(busca === obj.first_name) return 0
-    else if(busca , obj.first_name) return -1
+    else if(busca < obj.first_name) return -1
     else return 1
 }), {comps})
 console.timeEnd('Buscando ORKUTILSON')
