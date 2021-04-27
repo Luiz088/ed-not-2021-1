@@ -23,7 +23,7 @@ function quickSort(vetor, ini = 0, fim = vetor.length -1) {
                 comps++
                 div++
                 if(i !== div) {
-                    [ vetor[i], vetor[div] ] = [ vetor[div], vetor[i] ] //trocando a posição dos itens****
+                    [ vetor[i], vetor[div] ] = [ vetor[div], vetor[i] ] t
                     trocas++
                 }
             }
